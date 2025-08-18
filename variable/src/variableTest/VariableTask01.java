@@ -23,7 +23,7 @@ public class VariableTask01 {
 		System.out.println(num4);
 		System.out.println(name3);
 		System.out.print(question2);
-		System.out.print(name5+',');
+		System.out.print(name5);
 		System.out.println(name6);
 	
 
