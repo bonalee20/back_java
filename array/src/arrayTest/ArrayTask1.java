@@ -71,11 +71,36 @@ public class ArrayTask1 {
   		
 //      골드
 //      5개의 정수를 입력받고 배열에 담은 후 최대값과 최소값 출력
+//      Scanner sc = new Scanner(System.in);
+//      int[] arData7 = new int[5];
+//      String message = "5개 정수를 입력하세요.\nex)10 20 30 40 50";
+//      int min = 0, max = 0;
+//      
+//      System.out.println(message);
+//      for(int i = 0; i < arData7.length; i++) {
+//         arData7[i] = sc.nextInt();
+//      }
+//      
+//      min = arData7[0];
+//      max = arData7[0];
+//      
+//      for(int i = 0; i < arData7.length; i++) {
+//         if(max < arData7[i]) { max = arData7[i]; }
+//         if(min > arData7[i]) { min = arData7[i]; }
+//      }
+//      
+//      System.out.println("최대값: " + max);
+//      System.out.println("최소값: " + min);
+  		
+  		
+  		
+//      골드
+//      5개의 정수를 입력받고 배열에 담은 후 최대값과 최소값 출력
   		int [] arData7 = new int[10];
   		Scanner sc = new Scanner(System.in);
   		String message = "\n5개의 정수를 입력하세요 \n ex) 10 20 30 40 50";
   		int min= 0,max =0; 
-  		String min1 = "";	
+
   		System.out.println(message);
   		
   		for(int f=0;f<5;f++) {
@@ -92,7 +117,7 @@ public class ArrayTask1 {
   			}
   		
   		}
-  		System.out.println(min1+"=최소값");
+  		
   		System.out.println(max+"=최대값");
   		
   		
