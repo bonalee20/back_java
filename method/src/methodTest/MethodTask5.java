@@ -62,8 +62,7 @@ public class MethodTask5 {
 	// 문자를 적는다 scanner 
 	// 글자를 뜯는다 char
 	// 글자 하나를 어떻게 다른 index에 넣을 수 있을까? 
-	// abc => 012 => 
-	// 1. result.length - i -1 => 210
+	// abc => 012 => result.length 3 - i -1 => 210
 
 	
 	String back(String result) {
@@ -80,7 +79,6 @@ public class MethodTask5 {
 	
 	//main start
 	public static void main(String[] args) {
-
 		
 		// 1번
 		MethodTask5 mt1 = new MethodTask5();
