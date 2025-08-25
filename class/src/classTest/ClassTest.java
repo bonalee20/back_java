@@ -14,7 +14,7 @@ public class ClassTest {
 		// this 자기 자신의 주소값
 		this.name = name;
 		this.age = age;
-	}
+	}	
 	
 	
 	

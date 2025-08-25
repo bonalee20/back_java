@@ -2,53 +2,93 @@ package classTask;
 
 import java.util.Scanner;
 
-class Student{
-	//필드
-	int mathTest = 0;
-	int englishTest = 0;
-	int koreanTest = 0;
-	double average = 0.0;
-	int total = 0;
-	
-	//기본 생성자
-	public Student() {;}
-	
-	//초기화 생성자
-	public Student(int mathTest, int englishTest, int koreanTest) {
-		this.mathTest = mathTest;
-		this.englishTest = englishTest;
-		this.koreanTest = koreanTest;
-		this.total = mathTest+englishTest+koreanTest;
-	}
-	
-	void printScore() {
-		double average = total / 3.0 ;
-		System.out.println("총점:"+ total);
-		System.out.println("평균:"+ average);
-	}
-	
-	// 왜 void printScore() 안에 mathTest englishTest koreanTest 안 넣어도 되는지
-	
+// 학생 클래스
+// 학생이 국어점수, 영어점수, 수학점수를 입력하면
+// 총점과 평균을 확인해서 출력
+class Student {
+   int number;
+   int kor;
+   int eng;
+   int math;
+   int total;
+   double average;
+   
+   public Student() {;}
+   public Student(int number, int kor, int eng, int math) {
+      this.number = number;
+      this.kor = kor;
+      this.eng = eng;
+      this.math = math;
+      this.total = kor + eng + math;
+      this.average = Double.parseDouble(String.format("%.3f", total / 3.0));
+   }
+   
+   public Student(int number, int[] scores) {
+      this.number = number;
+      this.kor = scores[0];
+      this.eng = scores[1];
+      this.math = scores[2];
+      this.total = kor + eng + math;
+      this.average = Double.parseDouble(String.format("%.3f", total / 3.0));
+   }
+   
+   public Student(int number, Scores scores) {
+      this.number = number;
+      this.kor = scores.kor;
+      this.eng = scores.eng;
+      this.math = scores.math;
+      this.total = kor + eng + math;
+      this.average = Double.parseDouble(String.format("%.3f", total / 3.0));
+   }
 }
 
+class Scores {
+   int kor;
+   int eng;
+   int math;
+   public Scores() {;}
+   public Scores(int kor, int eng, int math) {
+      this.kor = kor;
+      this.eng = eng;
+      this.math = math;
+   }
+   
+} 
 
 public class ClassTask1 {
-		public static void main(String[] args) {
-			Scanner sc = new Scanner(System.in);
-			System.out.println("수학, 영어, 국어 점수를 입력하세요 \nex) 50 60 70");
-//	      클래스이름	 내가정한거 =  초기화 생성자에 값 넣기
-			Student user = null;
-			int userTest1 =0,userTest2 =0,userTest3=0;
-			userTest1 = sc.nextInt();
-			userTest2 = sc.nextInt();
-			userTest3 = sc.nextInt();
-			//  선언은 코드 위에 한다.!!!
-			user = new Student(userTest1,userTest2,userTest3);
-	//      클래스이름	 내가정한거 =  초기화 생성자에 값 넣기
-			user.printScore();
-	//      (위에)내가 정한거. 에서 클래스의 메서드(?) 사용
-			
-			
-			//main end
-		}
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      Student bae = null;
+      
+      Scores scores = new Scores();
+//      int[] scores = new int[3];
+//      int kor = 0, eng = 0, math = 0;
+      
+      String message = "국어, 영어, 수학 점수를 입력하세요.\nex)70 80 90";
+      
+      System.out.println(message);
+      scores.kor = sc.nextInt(); 
+      scores.eng = sc.nextInt(); 
+      scores.math = sc.nextInt(); 
+            
+      bae = new Student(1, scores);
+      
+      System.out.println("총 점: " + bae.total);
+      System.out.println("평 균: " + bae.average);
+   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
