@@ -15,7 +15,7 @@ class AA {
 class BB extends AA {
    @Override
    void paint() {
-      super.draw();
+      super.draw();//AA draw 가기
       System.out.print("C");
       this.draw();
    }
