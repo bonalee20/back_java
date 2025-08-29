@@ -8,7 +8,13 @@ public class Human extends NotPlayerCharcter{
 	}
 	@Override
 	void drop() {
-		System.out.println("골드 얻음");
+		// TODO Auto-generated method stub
+		super.drop();
 	}
+	
+//	@Override
+//	void drop() {
+//		System.out.println("골드 얻음");
+//	}
 	
 }

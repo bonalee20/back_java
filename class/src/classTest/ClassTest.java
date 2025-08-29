@@ -23,7 +23,7 @@ public class ClassTest {
 // 생성자= heap 메모리에 할당시킨 (ClassTest)주소 값를  가지고 옴 ( 리턴값 = 주소 값)
 		ClassTest ct1 = new ClassTest("고길동", 20); //생성자를 통해 객체가 만들어짐
 	 //   타입    객체 이름 = (주소) 값
-		System.out.println(ct1.age);
+		System.out.println(ct1.age);	
 		
 		ClassTest ct2 = new ClassTest();
 		System.out.println(ct2);
