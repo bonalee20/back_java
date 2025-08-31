@@ -4,7 +4,6 @@ public class BaeSeungWon {
    String name;
    int age;
    String hobby;
-   me
    public BaeSeungWon() {;}
    public BaeSeungWon(String name, int age, String hobby) {
       this.name = name;
