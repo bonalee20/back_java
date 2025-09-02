@@ -10,7 +10,7 @@ public class ArrayListTask3 {
 		products.add(new Product(2L, "desk", 10, 200));
 		products.add(new Product(3L, "mouse", 8, 200));
 		products.add(new Product(4L, "monitor", 10, 20));
-		products.add(new Product(5L, "keybroad", 5, 20));
+		products.add(new Product(5L, "keybroad", 5, 920));
 		
 		//System.out.println(products);
 		
