@@ -1,4 +1,4 @@
-package collection;
+package collectionTest;
 
 public class Array {
 

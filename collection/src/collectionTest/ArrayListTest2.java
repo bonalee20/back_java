@@ -1,4 +1,4 @@
-package collection;
+package collectionTest;
 
 import java.util.ArrayList;
 
@@ -29,8 +29,10 @@ public class ArrayListTest2 {
 
 		datas.add(50);
 		datas.add(500);
-		datas.add(90);
+		datas.add(80);
 		System.out.println(datas);
+		datas.indexOf((Integer)10);
+		System.out.println(datas.indexOf((Integer)10));
 		
 		try {
 			datas.set(90, 9);
@@ -54,7 +56,21 @@ public class ArrayListTest2 {
 			e.printStackTrace();
 		}
 
+		//삭제
+		//1. 인덱스으로 삭제 => 
+		if(datas.contains(80)) {
+			datas.remove(datas.indexOf(80));
+			
+		}
 		
+		// 2. 값으로 삭제
+		if(datas.contains(500)) {
+			// 정수 -> 정수
+			//rapping
+			datas.remove(Integer.valueOf(500));
+			
+		}
+		System.out.println(datas);
 	}
 		
 }
