@@ -8,11 +8,7 @@ public class DBconnecter {
 	// new =  동적 할당
 	// 클래스 텀
 	public static ArrayList<User> users = new ArrayList<User>();
-	public static void main(String[] args) {
-		users.add("1","2","3","4");
-		
-		
-	}
+	
 	
 }
 

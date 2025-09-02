@@ -35,20 +35,17 @@ public class ArrayListSep {
 				System.out.println(product3);
 			}
 		}
+		System.out.println(products);
+		
 		System.out.println("\n 4");
 		 //4. 상품이름이 마우스인 상품 삭제
-		for(ProductSep product4:products) {
-			if(product4.getName().equals("mouse")) {
-				
-				//products.remove(0)
+		for(int i = 0; i <products.size(); i++) {
+			if(products.get(i).getName().equals("mouse")) {
+				products.remove(i);
 			}
 		}
+		System.out.println(products);
 		
-		
-		System.out.println("\n 4");
-		
-		
-		
-		
+
 	}
 }
