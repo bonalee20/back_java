@@ -1,6 +1,7 @@
 package collectionTest.arrayList2;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Scanner;
@@ -22,6 +23,7 @@ public class UserField {
    public ArrayList<User> users = DBconnecter.users;
    public static String userId;
    public static String code;
+   public static String userPassWord;// me
    final int KEY = 300;
    
 //      아이디 검사
@@ -75,8 +77,31 @@ public class UserField {
    }
   //========day14=======================================================================================================
 //      비밀번호 변경(마이페이지)
+   //마이페이지에서 비밀번호뿐만 아니라 이름, 닉네임 등 다른 것들을 받을 수 이ㅣㅆ음
    
+   public void update(User user) {
+	   String newPassword = "";
+	   User userInDb = checkId(user.getId());
+	   if(userInDb != null) {
+		   userInDb.setPassword(encrypt(user.getPassword()));
+	   }
+	   
+   }
 //      비밀번호 변경(비밀번호 변경 30일)
+   // 비밀번호 변경 페이지에 비밀번호 2개만 있는 가정
+
+   public void update(String passWord, String newPassWord) {
+	   User userInDb = checkId(userId);
+	   if(userInDb != null) {
+		   userInDb.setPassword(encrypt(newPassWord));
+	   }
+	   
+   }
+   
+   
+   
+   
+   
 //     	인증번호 생성
    public String randomNumber() {
 	   String code = "";
@@ -173,12 +198,12 @@ public class UserField {
    
    
 
-//인증번호 확인
+   	//인증번호 확인
    public boolean checkCode(String inputCode) {
 	   return code.equals(inputCode);
    }
    
-   
+   //main=============================================================================
    public static void main(String[] args) {
       UserField uf = new UserField();
       Scanner sc = new Scanner(System.in);
@@ -189,11 +214,6 @@ public class UserField {
       uf.randomNumber();
       uf.sendEmail("bonalee0226@naver.com");
       //이메일 인증번호 확인
-      
-      //System.out.println(message);
-      //inputCode = sc.nextLine().trim();
-      
-      
      do {
     	  if(errorCount==0) {
     		  System.out.println(message);
@@ -219,7 +239,7 @@ public class UserField {
     	  System.out.println("fail");
       }
       	
-      
+      uf.changePassword();
       
    }
    
