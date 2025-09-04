@@ -1,4 +1,4 @@
-package streamTest;
+package streamTest.forEach;
 
 import java.util.ArrayList;
 import java.util.stream.IntStream;
@@ -14,6 +14,7 @@ public class StreamTest {
 	public static void main(String[] args) {
 		// IntStream 역할 = 정수형 문법을 이용해서 stream 
 		ArrayList<Integer> datas = new ArrayList<Integer>();
+		
 		//.range(시작 포함, 끝 포함 안 됨)
 		IntStream.rangeClosed(0, 10).forEach((n) -> datas.add(n));
 		//.rangeClosed(시작 포함, 끝 포함)
@@ -42,6 +43,7 @@ public class StreamTest {
 		//datas.forEach((n)->datas.add(n, 2n));
 		
 		
+		/// forEach 
 		datas.forEach((n)->{
 			if(n%2==0) {
 				System.out.println(n);
@@ -57,6 +59,13 @@ public class StreamTest {
 		//.stream = 컬랙션을 Stream 객체로 변경
 		//.chars = 문자열을 Stream 객체로 변경
 		"ABCD".chars().forEach(System.out::print);
-
+		
+//====== day 15 ==============================================================================================
+		//5. stream -> filter 가능
+		
+		
+		
+		
+		
 	}
 }

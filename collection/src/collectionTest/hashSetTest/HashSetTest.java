@@ -18,7 +18,7 @@ public class HashSetTest {
 		System.out.println(mbtiType);// 순서 없음
 		// 데이커를 가져오고 싶을 때 순서를 부여해야한다.
 		
-		//Iterator: 순서가 없을 때 순서를 부여할 수 있는 인테페이스
+		
 		Iterator<String> iter = mbtiType.iterator();
 		while(iter.hasNext()) {
 			String mbti = iter.next();

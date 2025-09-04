@@ -8,7 +8,7 @@ import org.json.JSONObject;
 
 public class JsonArrayListTest {
 	public static void main(String[] args) {
-		ArrayList<User> users= new ArrayList<User>();
+		ArrayList<User> users = new ArrayList<User>();
 		JSONArray usersJson = new JSONArray();
 		JSONObject userJson = new JSONObject();
 		
