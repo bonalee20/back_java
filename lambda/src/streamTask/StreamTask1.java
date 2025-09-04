@@ -55,21 +55,44 @@ public class StreamTask1 {
 		
 //      7. 한글을 정수로 변경 "공칠이삼" -> 0723
 		String hangle = "공일이삼사오육칠팔구";
-		String number = "0123456789";
 		// 한글자씩 가지고 오기 chars()
-		ArrayList<String> data7= new ArrayList<String>(Arrays.asList("칠이삼"));
+		ArrayList<Character> data7= new ArrayList<Character>(Arrays.asList('공','칠', '이'));
 
 		//data7.stream().map(data->hangle.indexOf(data))
 		// "공칠이삼" -> 0723 
 		// 공이 들어오면 필터를 통해 공과 일치하는 한글의 인덱스 data.chars()==hangle.chars()
 	
-		//.filter(data -> data.chars()==number.chars()).forEach(n->data7.add(n)); //칠=7
+		//.filter(data -> data.chars()==number.chars()).forEach(n->data7.add(n)); 
 		//.map(data -> "0123456789".indexOf(data)).forEach(System.out::print);
+		//data7.stream().map(data -> number.indexOf(number)).forEach(System.out::print);; //칠=7
+		//data7.stream().toString().chars().map(c->number.indexOf(String.valueOf(c))).forEach(System.out::print);;
+		//data7.stream().toString().chars().forEach(System.out::print);
+		//filter 한글과 
+
+		//칠을 7으로 바꾸기 7은 number index 7  
+		// //.filter((c)-> hangle.indexOf(String.valueOf(c)) == number.indexOf(0) )
 		
+		//data7.stream().map(n->number.indexOf(hangle.indexOf(String.valueOf(n)))).forEach(System.out::print);;
 		
-		data7.stream().map(data -> data.chars()).forEach(System.out::print);
+		data7.stream().map(n->hangle.indexOf(n)).forEach(System.out::print);
+
+		//.filter((c)-> c == number.indexOf(String.valueOf(c)))
+		
 		
 //      8. 정수를 한글로 변경 0723 -> "공칠이삼"
+		ArrayList<Character> data8= new ArrayList<Character>(Arrays.asList('0','7', '2'));
+		data8.stream().map(n->hangle.charAt(n-'0')).forEach(System.out::print);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
