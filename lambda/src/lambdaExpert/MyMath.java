@@ -34,26 +34,26 @@ public class MyMath {
  
 	   }
       
-//      전체 수식에서 연산자만 분리하는 람다 메서드 구현
-      OperCheck operCheck = (String result)->{
-    	  String minus="", plus="";
-    	  for(int i = 0; i < result.length(); i++) {
-    		  if(result.charAt(i) == 43) {
-    			  plus +="+";
-    		  }else if(result.charAt(i) == 45) {
-    			  minus +="-";
-    		  }else {
-    			  continue;
-    		  }
-    	  }
-
-    	  System.out.println(plus.split("+"));
-    	  
- 
-    	  System.out.println(minus.replaceFirst("-", "").split("-"));
-    	  return null;
-      };
-      
-      operCheck.getOpers(input);
+////      전체 수식에서 연산자만 분리하는 람다 메서드 구현
+//      OperCheck operCheck = (String result)->{
+//    	  String minus="", plus="";
+//    	  for(int i = 0; i < result.length(); i++) {
+//    		  if(result.charAt(i) == 43) {
+//    			  plus +="+";
+//    		  }else if(result.charAt(i) == 45) {
+//    			  minus +="-";
+//    		  }else {
+//    			  continue;
+//    		  }
+//    	  }
+//
+//    	  System.out.println(plus.split("+"));
+//    	  
+// 
+//    	  System.out.println(minus.replaceFirst("-", "").split("-"));
+//    	  return null;
+//      };
+//      
+//      operCheck.getOpers(input);
    }
 }

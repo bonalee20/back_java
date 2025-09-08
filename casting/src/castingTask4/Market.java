@@ -14,8 +14,6 @@ public class Market {
 		this.name = name;
 	}
 
-///////////////////////////////////////////////////////
-
 
 
 //  - 캐스팅 심화
@@ -60,22 +58,22 @@ public class Market {
 	
 	
 	//main start
-	 public static void main(String[] args) {
-
-		 //2. 상품 등록
-		 Product [] product = {new Product("pen",200,20),
-				 new Product("water",1000,50),
-				 new Product("pencil",100,50),
-				 new Product("cat",10000,5),
-				 new Product("bread",4000,10)
-		 };
-		 
-		 //3. 판매
-		 MarketMember user1= new MarketMember();
-		 System.out.println(user1.getpointMember(product[3]));
-		 
-		 MarketNonMember user2= new MarketNonMember();
-		 System.out.println(user2.getpointMember(product[1]));
-	}
-	
+//	 public static void main(String[] args) {
+//
+//		 //2. 상품 등록
+//		 Product [] product = {new Product("pen",200,20),
+//				 new Product("water",1000,50),
+//				 new Product("pencil",100,50),
+//				 new Product("cat",10000,5),
+//				 new Product("bread",4000,10)
+//		 };
+//		 
+//		 //3. 판매
+//		 MarketMember user1= new MarketMember();
+//		 System.out.println(user1.getpointMember(product[3]));
+//		 
+//		 MarketNonMember user2= new MarketNonMember();
+//		 System.out.println(user2.getpointMember(product[1]));
+//	}
+//	
 }

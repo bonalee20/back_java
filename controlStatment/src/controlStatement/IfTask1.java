@@ -13,7 +13,6 @@ public class IfTask1 {
 		num2 = sc.next();
 		
 		result = Integer.parseInt(num1) - Integer.parseInt(num2);
-		if()
 		
 	}
 }

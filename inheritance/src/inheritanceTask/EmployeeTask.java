@@ -6,7 +6,7 @@ class EmployeeTask extends PersonTask{
 	int money = 0;
 	public EmployeeTask() {;}
 	public EmployeeTask(String name, int age, String address, int phone, int money) {
-		super(name, age, address, phone)
+		super(name, age, address, phone);
 		this.money = money;
 	}
 
