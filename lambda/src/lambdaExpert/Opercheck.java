@@ -1,7 +1,7 @@
 package lambdaExpert;
 
 @FunctionalInterface
-public interface OperCheck {
+public interface Opercheck {
 	public String[] getOpers(String input);
 }
 //[심화 실습]
