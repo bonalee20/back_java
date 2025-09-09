@@ -1,8 +1,7 @@
 package practiceSep2;
 
-import java.util.ArrayList;
 
-import collectionTest.arrayList.Product;
+import java.util.ArrayList;
 
 public class ArrayListSep {
 	public static void main(String[] args) {

@@ -39,8 +39,8 @@ public class Three {
 				foundProduct = pro;
 			}
 		}
-		products.remove(products.indexOf(foundProduct));
-		System.out.println(products.remove();
+		//products.remove(products.indexOf(foundProduct));
+		//System.out.println(products.remove();
 		
 		
 		

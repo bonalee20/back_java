@@ -239,7 +239,7 @@ public class UserField {
     	  System.out.println("fail");
       }
       	
-      uf.changePassword();
+      //uf.changePassword();
       
    }
    

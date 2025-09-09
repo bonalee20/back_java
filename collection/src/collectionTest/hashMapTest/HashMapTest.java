@@ -24,7 +24,6 @@ public class HashMapTest {
 		System.out.println(userMap.entrySet());
 		// set 자료 구조에 key = value이 퍼져있다.
 		
-		Interator<Entry<String, Object>> userMapIter = userMap.entrySet().iterator();
-		while( )
+		
 	}
 }
