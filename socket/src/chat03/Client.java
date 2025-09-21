@@ -17,11 +17,13 @@ public class Client {
 		
 	
 			try (
-					Socket socket = new Socket(ip, 7777);
+					Socket socket = new Socket(ip, 7777); // 소캣 연결 try catch 필수
 					PrintWriter output = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
+					// 클라이언트가 쓸 것을 가지고 온다. autoflash true
 					BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+					// 쓰면서도 받기, 
 					BufferedReader keyInput = new BufferedReader(new InputStreamReader(System.in));
-					
+					// 보낼 준비 InputStreamReader
 					) {
 				
 				
@@ -29,11 +31,12 @@ public class Client {
 				
 				
 				ClientThread clientThread = new ClientThread(input);
+				// 클라이언트 스레드 생성
 				clientThread.start();
-				
-				String message = null;
-				while((message = keyInput.readLine()) != null) {
-					output.println(name + ": " + message);
+				// 클라이언트 스레드 시작
+				String message = null; //메세지 넣을 곳
+				while((message = keyInput.readLine()) != null) { // 반복 횟수 몰라 읽을 게 없을 떄 까지 돌기
+					output.println(name + ": " + message); // 접속한 사람과  메세지 출력
 				}
 				
 				
@@ -50,27 +53,26 @@ public class Client {
 
 
 class ClientThread extends Thread{
-	private BufferedReader input;
-	
-	public ClientThread() {;}
+	private BufferedReader input; 
+	public ClientThread() {;} // 기본생성자
 
-	public ClientThread(BufferedReader input) {
+	public ClientThread(BufferedReader input) { // 초기화
 		this.input = input;
 	}
 	
 	
 	@Override
-	public void run() {
-		String message = null;
+	public void run() { // 스레드 실생 run 메세드 
+		String message = null; // 메세지 저장 공간
 		try {
-			while((message = input.readLine()) !=null) {
+			while((message = input.readLine()) !=null) { //반복 횟수 몰라 읽을 줄이 없을 때 까지
 				
 			}
-		} catch (IOException e) {
+		} catch (IOException e) { // 예외 처리
 			e.printStackTrace();
 		}finally {
 			try {
-				if(input !=null) {
+				if(input !=null) { 
 					input.close();
 				}
 			} catch (IOException e) {
